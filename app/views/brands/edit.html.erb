@@ -1,0 +1,9 @@
+<h1> all brands </h1>
+
+<%= image_tag @brand.image, :class => 'feature' if @brand.image.present? %>
+<h2> <%= @brand.name %></h2>
+<!--
+<div class="controls">
+    <%= link_to 'Edit Brand', edit_brand_path(@edit_brand_path) %>
+    <%= link_to 'Delete Brand', @brand, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
+</div>-->
