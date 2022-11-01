@@ -1,0 +1,53 @@
+<h1> <%= @shoe.name  %></h1>
+    <%= image_tag @shoe.first_image, :class => 'thumb' if @shoe.first_image.present? %>
+    <ul> 
+
+
+    <% if @shoe.brand.present? %>
+    <li> Brand: <%= link_to @shoe.brand.name, @shoe.brand %></li>
+    <% end %>
+
+    <li> Name : <%= @shoe.name %></li>
+    <li> Color : <%= @shoe.color %></li>
+    <li> Release Year : <%= @shoe.release_year %></li>
+    <li> Style :  <%= @shoe.style %></li>
+    <li> Price : AUD <%= @shoe.cost_price %></li>
+    <li> Description :  <%= @shoe.description %></li>
+
+ </ul>
+<% if @current_user.present? %>
+    <div class="control" >
+    
+    <%= link_to "Edit shoes ", edit_shoe_path(@shoe) if @current_user.admin? %>
+    <%= link_to "Delete shoes ", @shoe , :method => :delete, :data => { :confirm => 'Are You Sure '} if @current_user.admin? %>
+<% end %>
+
+
+
+
+	<div class="row">
+		<div class="col-12 d-flex justify-content-center">
+			<h4>CURRENT MARKET VALUE</h4>
+		</div>
+	</div closing price header row>
+
+	<div class="row">
+		<div class="col-12 shoe-market-price">
+			<div class="card">
+  			<div class="card-body">
+  				<%= image_tag("stockx.png") %>
+    			<h5 id="stockx"><%= image_tag("ajax-loader.gif") %></h5>
+  			</div>
+			</div>
+
+			<div class="card">
+  			<div class="card-body">
+  				<%= image_tag("goat.png") %>
+    			<h5 id="goat"><%= image_tag("ajax-loader.gif") %></h5>
+  			</div>
+			</div>
+
+		</div closing market price col>
+	</div close price row>
+</div close main container>
+

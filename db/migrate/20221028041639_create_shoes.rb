@@ -11,7 +11,6 @@ class CreateShoes < ActiveRecord::Migration[5.2]
       t.text :second_image
       t.text :third_image
       t.text :fourth_image
-      t.integer :brand_id
       t.references :size
       t.timestamps
 

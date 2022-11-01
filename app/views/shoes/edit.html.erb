@@ -1,0 +1,28 @@
+<h1>Edit shoe </h1>
+<%= form_for @shoe do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :color , 'Color '%>
+<%= f.text_field :color, :placeholder => 'Color' %>
+
+<%= f.label :release_year, 'Release Year' %>
+<%= f.text_field :release_year, :placeholder => 'YYYY' %>
+
+<%= f.label :style %>
+<%= f.text_field :style %>
+
+<%= f.label :cost_price %>
+<%= f.text_field :cost_price %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.label :brand_id %>
+<%= f.select :brand_id , Brand.pluck(:name , :id), :include_blank => true %>
+
+
+<%= f.submit %>
+
+<%end %>

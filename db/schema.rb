@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_28_044835) do
+ActiveRecord::Schema.define(version: 2022_10_31_234543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,10 +42,10 @@ ActiveRecord::Schema.define(version: 2022_10_28_044835) do
     t.text "second_image"
     t.text "third_image"
     t.text "fourth_image"
-    t.integer "brand_id"
     t.bigint "size_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "brand_id"
     t.index ["size_id"], name: "index_shoes_on_size_id"
   end
 

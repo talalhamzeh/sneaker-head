@@ -1,0 +1,17 @@
+<h1> All shoes </h1>
+
+<% @shoes.each do |shoe| %>
+<div class="item">
+  
+  <div class="ola">
+   
+   
+    <%= image_tag shoe.first_image, :class => 'thumb' if shoe.first_image.present? %>
+    <%= link_to shoe.name , shoe %>
+     </div>
+  
+</div>
+
+    <% end %>
+
+	

@@ -1,2 +1,6 @@
 <h1> <%= @brand.name %></h1>
 <%= image_tag @brand.image, :class => 'feature' if @brand.image.present? %>
+
+<% @brand.shoes.each do |shoe| %>
+    <%= link_to image_tag(shoe.first_image, :class => 'thumb'), shoe %>
+<% end %>
