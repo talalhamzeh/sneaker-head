@@ -10,70 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_02_225942) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "blogs", force: :cascade do |t|
-    t.text "title"
-    t.text "content"
-    t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "brands", force: :cascade do |t|
-    t.text "name"
-    t.integer "shoe_id"
-    t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "collections", force: :cascade do |t|
-    t.text "name"
-    t.integer "shoe_id"
-    t.integer "user_id"
-  end
-
-  create_table "collections_shoes", id: false, force: :cascade do |t|
-    t.integer "collection_id"
-    t.integer "shoe_id"
-    t.index ["collection_id", "shoe_id"], name: "index_collections_shoes_on_collection_id_and_shoe_id", unique: true
-  end
-
-  create_table "shoes", force: :cascade do |t|
-    t.text "name"
-    t.text "color"
-    t.text "release_year"
-    t.text "style"
-    t.text "description"
-    t.integer "cost_price"
-    t.text "first_image"
-    t.text "second_image"
-    t.text "third_image"
-    t.text "fourth_image"
-    t.bigint "size_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "brand_id"
-    t.index ["size_id"], name: "index_shoes_on_size_id"
-  end
-
-  create_table "sizes", force: :cascade do |t|
-    t.text "size"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.text "name"
-    t.text "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_digest"
-    t.boolean "admin", default: false
-  end
 
 end
