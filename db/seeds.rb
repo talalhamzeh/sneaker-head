@@ -64,4 +64,7 @@ Shoe.create(name: 'ASICS Gel-Lyte III Afew "Koi"', color: 'RED/BLACK-WHITE', rel
 puts "#{ Shoe.count } shoes"
 
 
+b2.shoes << s1 << s2 << s5 
+
+
 
