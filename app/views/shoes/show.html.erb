@@ -1,3 +1,5 @@
+<div class="show-shoe">
+
 <h1> <%= @shoe.name  %></h1>
     <%= image_tag @shoe.first_image, :class => 'thumb' if @shoe.first_image.present? %>
     <ul> 
@@ -6,7 +8,6 @@
     <% if @shoe.brand.present? %>
     <li> Brand: <%= link_to @shoe.brand.name, @shoe.brand %></li>
     <% end %>
-
     <li> Name : <%= @shoe.name %></li>
     <li> Color : <%= @shoe.color %></li>
     <li> Release Year : <%= @shoe.release_year %></li>
@@ -17,7 +18,8 @@
  </ul>
 <% if @current_user.present? %>
     <div class="control" >
-    
+	
+    <%= button_to "Add to Favorite " , favorite_path(@shoe.id) %>
     <%= link_to "Edit shoes ", edit_shoe_path(@shoe) if @current_user.admin? %>
     <%= link_to "Delete shoes ", @shoe , :method => :delete, :data => { :confirm => 'Are You Sure '} if @current_user.admin? %>
 <% end %>
@@ -35,14 +37,14 @@
 		<div class="col-12 shoe-market-price">
 			<div class="card">
   			<div class="card-body">
-  				<%= image_tag("stockx.png") %>
+  				<%= image_tag "stockx.png", :class=>'market'%>
     			<h5 id="stockx"><%= image_tag("ajax-loader.gif") %></h5>
   			</div>
 			</div>
 
 			<div class="card">
   			<div class="card-body">
-  				<%= image_tag("goat.png") %>
+  				<%= image_tag "goat.png" , :class=>'market'%>
     			<h5 id="goat"><%= image_tag("ajax-loader.gif") %></h5>
   			</div>
 			</div>
@@ -51,3 +53,4 @@
 	</div close price row>
 </div close main container>
 
+</div>

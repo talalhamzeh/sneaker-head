@@ -1,3 +1,4 @@
+<div id="index_shoes">
 <%= form_for @shoe do |f| %>
 
 <%= f.label :name %>
@@ -24,6 +25,8 @@
 <%= f.label :brand_id %>
 <%= f.select :brand_id , Brand.pluck(:name , :id), :include_blank => true %>
 
+
 <%= f.submit %>
 
 <%end %>
+</div>

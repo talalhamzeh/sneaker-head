@@ -1,0 +1,92 @@
+ <!-- <% if @current_user.present? %>
+    <%= link_to "All users", users_path if @current_user.admin? %>
+    <%= link_to 'Brands', brands_path %>
+    <%= link_to 'orders', orders_path %>
+     <%= link_to 'my Collection', collections_path %>
+     <%= link_to 'New Collection', new_collection_path  %>
+    <%= link_to 'Shoes', shoes_path %>
+    <%= link_to 'New Brand', new_brand_path if @current_user.admin? %>
+    <%= link_to 'New Shoes', new_shoe_path if @current_user.admin? %>
+    <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+    <a href="/ebays">ebay Search</a>
+
+<% else %>
+  <%= link_to "Sign Up", new_user_path %>
+  <%= link_to "Login", login_path %>
+  <% end %>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+  <%= link_to "Home" , root_path, :class =>"nav-link" %>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+  <div class="container">
+     <%= link_to root_path do %> 
+    <%= image_tag 'logo.png' , :class=>'navbar-brand'%>
+  <% end %>
+  
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+
+
+       <% if @current_user.present? %>
+   
+       <%= link_to "All users", users_path ,:class =>"nav-link" if @current_user.admin? %>
+     
+        <li class="nav-item active">
+          <%= link_to 'My Collection', collections_path , :class =>"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+        <%= link_to 'Brands', brands_path,:class=>"nav-link" %>
+        </li>
+          <li class="nav-item">
+                  <%= link_to 'Shoes', shoes_path,:class=>"nav-link" %>
+          </li>
+        <li class="nav-item">
+         <%= link_to 'New Shoes', new_shoe_path,:class=>"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+         <%= link_to "Logout #{ @current_user.name }", login_path, :method => 'delete' ,:class=>"nav-link"  %>
+        </li>
+          
+  <form action="/ebays/show", class="form-inline" >
+    <input class="form-control mr-sm-2" type="search" placeholder="Find your Sneaker on EBay" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+<% else %>
+    <li class="nav-item">
+  <%= link_to "Sign Up", new_user_path ,:class=>"nav-link" %>
+    </li>
+  
+    <li class="nav-item">
+    <%= link_to "Login", login_path ,:class=>"nav-link" %>
+    </li>
+
+  <% end %>
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>

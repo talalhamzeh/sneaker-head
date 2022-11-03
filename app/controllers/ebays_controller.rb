@@ -1,14 +1,17 @@
 class EbaysController < ApplicationController
     
-    def form 
+    def index 
         
     end
 
-    def info
-        Ebay::Finding::Api::Client.new("app_id")
-        
-     
+    def show
 
-   
+    require 'ebay/finding'
+
+    request = Ebay.finding
+    response = request.find_items_by_keywords('iphone') 
+    
+    
+        
     end
 end

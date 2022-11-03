@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sneakerhead</title>
+    <title>SneakerHead</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+
   </head>
 
-  <body>
+<body id="page-top">
 
-  <%= link_to "Home", root_path %>
+
+<%= render partial: "shared/navbar"  %>
+
+ <!--
   <% if @current_user.present? %>
     <%= link_to "All users", users_path if @current_user.admin? %>
     <%= link_to 'Brands', brands_path %>
+    <%= link_to 'orders', orders_path %>
+     <%= link_to 'my Collection', collections_path %>
+     <%= link_to 'New Collection', new_collection_path  %>
     <%= link_to 'Shoes', shoes_path %>
     <%= link_to 'New Brand', new_brand_path if @current_user.admin? %>
     <%= link_to 'New Shoes', new_shoe_path if @current_user.admin? %>
-    <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+    <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>f
     <a href="/ebays">ebay Search</a>
 
 <% else %>
   <%= link_to "Sign Up", new_user_path %>
   <%= link_to "Login", login_path %>
- 
-  
-
   <% end %>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+  <%= link_to "Home" , root_path, :class =>"nav-link" %>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+
+ 
+ -->
+
+<!-- Navigation -->
+
+
+<!-- Full Page Image Header with Vertically Centered Content -->
+
     <%= yield %>
+   
+
   </body>
-</html>
-
-
+  </html>

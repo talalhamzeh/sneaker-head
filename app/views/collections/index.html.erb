@@ -1,0 +1,15 @@
+<div id="index_shoes">
+
+
+<h1> my Collections </h1>
+
+
+
+<% @collections.each do |collection| %>
+<div class="item">
+  <p> " <%= link_to collection.name , collection %> " </p> 
+
+    </div>
+    <% end %>
+
+</div>

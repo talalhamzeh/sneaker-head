@@ -1,10 +1,20 @@
+
+
+<div id="index_shoes">
 <h1> All brands </h1>
 
-<% @brands.each do |brand| %>
-<div class="item">
-    <%= link_to brand.name , brand %>
-    <%= link_to image_tag brand.image, :class => 'thumb' if brand.image.present? %>
 
-    </div>
+
+<div class="row" id="brand">
+<% @brands.each do |brand| %>
+
+<div class="col-l-12 col-md-4">
+    <%= link_to brand.name , brand %>
+ 
+</div>
+ 
     <% end %>
-  
+
+
+</div>
+</div>

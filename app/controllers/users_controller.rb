@@ -26,7 +26,7 @@ before_action :check_for_admin, :only => [:index]
 
   private 
   def user_params 
-    params.require(:user).permit(:email ,:password ,:passowrd_confirmation )
+    params.require(:user).permit(:name , :email ,:password ,:passowrd_confirmation)
   end 
 
 

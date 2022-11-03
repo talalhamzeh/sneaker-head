@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-u1 = User.create :email => 'talal@ga.co', :password=>'password', :admin => true
-u2 = User.create :email => 'jayden@ga.co', :password=>'password'
+u1 = User.create :name => 'Talal' , :email => 'talal@ga.co', :password=>'password', :admin => true
+u2 = User.create :name => 'Jayden' , :email => 'jayden@ga.co', :password=>'password'
 
 puts "#{ User.count } users"
 
@@ -16,25 +16,25 @@ puts "#{ User.count } users"
 
 Brand.destroy_all
 
-b1=Brand.create(name: "adidas")
-b2=Brand.create(name: "Air Jordan")
-b3=Brand.create(name: "Asics")
-b4=Brand.create(name: "Balenciaga")
-b5=Brand.create(name: "Chanel")
-b6=Brand.create(name: "Converse")
-b7=Brand.create(name: "Diadora")
-b8=Brand.create(name: "Dior")
-b9=Brand.create(name: "Gucci")
-b10=Brand.create(name: "Li-Ning")
-b11=Brand.create(name: "Louis Vuitton")
-b12=Brand.create(name: "New Balance")
-b13=Brand.create(name: "Nike")
-b14=Brand.create(name: "Prada")
-b15=Brand.create(name: "Puma")
-b16=Brand.create(name: "Reebok")
-b17=Brand.create(name: "Saucony")
-b18=Brand.create(name: "Under Armour")
-b19=Brand.create(name: "Vans")
+b1=Brand.create(name: "adidas", image:'https://cdn.shopify.com/s/files/1/1055/5166/collections/2000px-Adidas_Logo.svg_2.png?v=1519705333')
+b2=Brand.create(name: "Air Jordan" , image: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/800px-Jumpman_logo.svg.png')
+b3=Brand.create(name: "Asics",image: 'https://cdn.freebiesupply.com/logos/large/2x/asics-logo-png-transparent.png')
+b4=Brand.create(name: "Balenciaga", image: 'https://brandlogos.net/wp-content/uploads/2022/01/balenciaga-brandlogo.net_-512x512.png')
+b5=Brand.create(name: "Chanel",image: 'https://e7.pngegg.com/pngimages/140/224/png-clipart-chanel-brand-prop-studios-fashion-logo-chanel-text-trademark.png')
+b6=Brand.create(name: "Converse", image: 'https://brandslogos.com/wp-content/uploads/images/large/converse-logo-1.png')
+b7=Brand.create(name: "Diadora", image: 'https://cdn.freebiesupply.com/logos/large/2x/diadora-2-logo-png-transparent.png')
+b8=Brand.create(name: "Dior", image: 'https://banner2.cleanpng.com/20180623/blg/kisspng-christian-dior-se-parfums-christian-dior-miss-dior-cognitive-5b2e174706a132.9456651515297472710272.jpg')
+b9=Brand.create(name: "Gucci", image:'https://i.pinimg.com/originals/0e/9e/df/0e9edf68a71c691ba32b5e88847588f8.png')
+b10=Brand.create(name: "Li-Ning", image:'https://upload.wikimedia.org/wikipedia/commons/6/6b/Li-Ning-logo.png')
+b11=Brand.create(name: "Louis Vuitton",image: 'https://banner2.cleanpng.com/20180629/lgl/kisspng-louis-vuitton-sarasota-chanel-fashion-monogram-louis-vuitton-logo-5b361d8a910343.445944051530273162594.jpg')
+b12=Brand.create(name: "New Balance", image:'https://cdn.freebiesupply.com/logos/large/2x/new-balance-2-logo-black-and-white.png')
+b13=Brand.create(name: "Nike", image:'https://cdn.freebiesupply.com/logos/large/2x/nike-4-logo-png-transparent.png')
+b14=Brand.create(name: "Prada", image:'https://brandslogos.com/wp-content/uploads/images/large/prada-logo-1.png')
+b15=Brand.create(name: "Puma", image:'https://assets.stickpng.com/images/580b57fcd9996e24bc43c4f8.png')
+b16=Brand.create(name: "Reebok", image:'https://png.monster/wp-content/uploads/2022/01/png.monster-3.png')
+b17=Brand.create(name: "Saucony",image:'https://cdn.freebiesupply.com/logos/large/2x/saucony-2-logo-png-transparent.png')
+b18=Brand.create(name: "Under Armour", image:'https://download.logo.wine/logo/Under_Armour/Under_Armour-Logo.wine.png')
+b19=Brand.create(name: "Vans", image:'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5240bb2a-0bd7-419e-884d-cc605b9e16a3/d81yw57-683b0049-e4a6-4dfd-b627-3b282ec6d8c3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUyNDBiYjJhLTBiZDctNDE5ZS04ODRkLWNjNjA1YjllMTZhM1wvZDgxeXc1Ny02ODNiMDA0OS1lNGE2LTRkZmQtYjYyNy0zYjI4MmVjNmQ4YzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.sPhBmGullGNl2gidCBaf2lA77GzSNTERUCVc9wieM90')
 
 puts "#{ Brand.count } brands"
 
@@ -52,4 +52,16 @@ s8 = Shoe.create(name: 'Jordan 1 Retro High UNC Patent (W)', color: 'OBSIDIAN/BL
 s9 = Shoe.create(name: 'Air Force 1 Low Off-White Volt', color: 'VOLT/HYPER JADE-CONE-BLACK', release_year: '2018', style: 'AO4606-700', description: 'Be more lit than a lightning bolt while wearing Nike and Virgil’s Air Force 1 Low Off-White Volt. This AF1 comes with a volt upper, black Nike “Swoosh”, volt midsole, and volt sole. These sneakers released in December 2018 and retailed for $170.', cost_price: 170, first_image: 'https://stockx-360.imgix.net/Nike-Air-Force-1-Low-Off-White-Volt/Images/Nike-Air-Force-1-Low-Off-White-Volt/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1544566859&w=1000', brand_id: 7)
 s10 = Shoe.create(name: 'adidas NMD Hu Pharrell Solar Pack Mother', color: 'WHITE/PINK/YELLOW', release_year: '2018', style: 'BB9531', description: 'Part one of three of Pharrell William''s Human Race "Solar Pack," these come in a pink, bright blue and yellow colorway. Sporting a pink-based Primeknit upper, tribal graphic detailing, the phrase “MOTH3R” embroidered down the middle of the sneaker, a Boost cushioned midsole and yellow outsole. Their release date was on August of 2018, where they were available at select adidas Originals retailers worldwide for $250.', cost_price: 250, first_image: 'https://stockx-360.imgix.net/Adidas-NMD-Hu-Pharrell-Mother/Images/Adidas-NMD-Hu-Pharrell-Mother/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000', brand_id: 9)
 s11 = Shoe.create(name: 'Jordan 1 Retro High Satin Shattered Backboard (W)', color: 'BLACK/BLACK-STARFISH-SAIL', release_year: '2019', style: 'AV3725-010', description: 'Stay shining and saying “nice for what,” in these Air Jordan 1 Retro High Satin Shattered Backboards. This Air Jordan 1 Retro High OG was made exclusively for women, and was inspired by the men’s release from 2015, which came in the same black, starfish, and sail colorway. Only this time around they sport a satin upper with premium leather mid panels, an embroidered “Wings” logo on the collar and a full translucent orange outsole. These AJ1s dropped in May of 2018, where they were available at select Jordan Brand retailers worldwide for $160. If you’re a fan of the original Shattered Backboard AJ 1 and dig the satin update, you need to have this pair in your collection.', cost_price: 160, first_image: 'https://stockx-360.imgix.net/Air-Jordan-1-Retro-High-Satin-Shattered-Backboard-W/Images/Air-Jordan-1-Retro-High-Satin-Shattered-Backboard-W/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000', brand_id: 2)
+Shoe.create(name: 'Jordan 6 Retro Aleali May (W)', color: 'RUST PINK/BRIGHT CRIMSON', release_year: '2019', style: 'CI0550-600', description: 'Have you ever wanted a shoe that screams “Wow”? If so, cop the new Jordan 6 Retro Aleali May (W). This women’s AJ 6 sports a pink upper, red Jordan Jumpman, pink midsole, and a translucent sole. These sneakers released in March 2019 and retailed for $190. Add some rust pink drip to your sneaker collection today.', cost_price: 190, first_image: 'https://stockx-360.imgix.net/Air-Jordan-6-Retro-Aleali-May-W/Images/Air-Jordan-6-Retro-Aleali-May-W/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1552579808&w=1000', brand_id: 4)
+
+Shoe.create(name: 'Jordan 1 Retro High Off-White White', color: 'WHITE/WHITE', release_year: '2018', style: 'AQ0818-100', description: 'Inspired by Air Jordan 1 colorways, the OFF-WHITE x Air Jordan 1 Retro High OG ''White'' 2018 is a reimagination of its ''Chicago''-themed predecessor. Designed by Virgil Abloh, the model features an all-white premium leather and mesh upper with deconstructed Swoosh branding and blue detailing, and Wings logos on the ankles. It is accented by black “AIR” lettering on the midsole, black ''Off-White™ for NIKE'' text on the side panels, and orange tabs.', cost_price: 190, first_image: 'https://stockx-360.imgix.net/air-jordan-1-retro-high-off-white-white_TruView/Images/air-jordan-1-retro-high-off-white-white_TruView/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000', brand_id: 2)
+Shoe.create(name: 'adidas Pharrell NMD HU China Pack Happy (Gold) (Friends and Family)', color: 'GOLD/WHITE', release_year: '2018', style: 'F99762', description: 'Available exclusively in China at release...until now, the gold adidas Pharrell NMD HU China Pack Happy is a literal holy grail. One of four colorways in the China Pack, the happy version features white Boost midsoles, EVA insert overlays, lacing cage system and trail rubber outsoles to complete the design altogether. The right shoe features “Happy” in white lettering while the left shoe has the same word in Chinese lettering. This specific pair was limited to only 300 pairs. These dropped in May of 2018 and were only available at select adidas originals stores in China.', cost_price: 250, first_image: 'https://stockx-360.imgix.net/Adidas-Pharrell-NMD-HU-China-Pack-Happy-Gold/Images/Adidas-Pharrell-NMD-HU-China-Pack-Happy-Gold/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000', brand_id: 3)
+Shoe.create(name: 'Air Force 1 Low Off-White
+', color: 'WHITE/WHITE-SAIL', release_year: '2017', style: 'AO4606-100', description: 'This Nike Air Force 1 Low was made in collaboration with Virgil Abloh''s Off-White imprint. A part of the "Ghosting" Series, this pair comes in a clean white and sail colorway. Sporting a reconstructed translucent upper, featuring a semi-revealing material to tie-in with the theme. Various materials are found throughout, as well as a red zip-tie and the words "Shoelaces" on the laces and "Air" on the translucent sole. Their release date was November 1st, 2017 where they were available alongside the rest of the Off-White x Nike "Ghosting" Collection. Retail for "The 10" Nike Air Force 1 Low was $170 and they were available in men''s sizing at select retailers worldwide.', cost_price: 170, first_image: 'https://stockx-360.imgix.net/Nike-Air-Force-1-Low-Off-White/Images/Nike-Air-Force-1-Low-Off-White/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000', brand_id: 13 )
+Shoe.create(name: 'Louis Vuitton LV Trainer Sneaker Boot High Black Grey', color: 'BLACK/GREY', release_year: '2019', style: '1A54IS', description: 'One of the standout looks of the Spring-Summer 2019 men''s show, the LV Trainer sneaker boot is an avant-garde hi-top crafted from black and gray calf leather. It features a padded collar and a velcro strap marked "Advanced Tech System". The Louis Vuitton signature on the side was hand-written by Artistic Director Virgil Abloh.', cost_price: 1600, first_image: 'https://stockx-360.imgix.net/Louis-Vuitton-LV-Trainer-Sneaker-Boot-High-Black-Grey/Images/Louis-Vuitton-LV-Trainer-Sneaker-Boot-High-Black-Grey/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1562620926&w=1000', brand_id: 13)
+Shoe.create(name: 'ASICS Gel-Lyte III Afew "Koi"', color: 'RED/BLACK-WHITE', release_year: '2015', style: 'H51NK-0190', description: 'In 2015 German boutique Afew and Asics teamed up to create the truly special Asics Gel-Lyte III Afew Koi. Based in Düsseldorf, Afew went all out for this collab''s in-store release. The shoe dropped with a beautiful wooden bento box, a special booklet about the shoe, Afex x Asics chopsticks, co-branded dustbag, and two pairs of extra laces in Wasabi and Soy. The Asics GL3 Afew Koi represents the history of Japan Day and draws from the legendary Koi fish for inspiration. The Afew Koi featured premium suede all over the shoe in a few different colors; lush red suede hit the toeboxes and heels while off-white long-hair suede graces the side panels. The Afew crest is flaunted on the heels and unique photo-printed insoles while Afew and Japanese writing are featured patches on the heels. The white midsoles keep things classic but the translucent outsoles showcase beautiful details. The Asics Gel Lyte 3 Afew Koi utilizes Asics'' tried and true Gel cushioing within the midsole for a perfectly cushioed ride. The split tongue made this shoe a favorite for runners in the 90s and the setup still feels futuristic today. These get more and more comfortable with every wear so don''t be afraid to show them off.', cost_price: 170, first_image: 'https://stockx-360.imgix.net/Asics-Gel-Lyte-III-Afew-Koi_TruView/Images/Asics-Gel-Lyte-III-Afew-Koi_TruView/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000', brand_id: 3)
+
 puts "#{ Shoe.count } shoes"
+
+
+
