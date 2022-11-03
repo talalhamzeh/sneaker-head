@@ -22,32 +22,33 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <%= form_for @user , :class=>"card-body cardbody-color p-lg-5"  do %>
+              <%= form_for @user , :class=>"card-body cardbody-color p-lg-5"  do |f| %>
 
                 <div class="form-outline mb-4">
-                   <%= label :name , " Your name " , :class => 'form-label' %>
-                  <%= text_field :name , :class => "form-control form-control-lg" %>
+                   <%= f.label :name , " Your name " , :class => 'form-label' %>
+                  <%= f.text_field :name , :class => "form-control form-control-lg" %>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <%= label :email , " Email Address " , :class => 'form-label'  %>
-                  <%= email_field :email , :class => "form-control form-control-lg" %>
+                  <%= f.label :email , " Email Address " , :class => 'form-label'  %>
+                  <%= f.email_field :email , :class => "form-control form-control-lg" %>
                 </div>
 
 
                 <div class="form-outline mb-4">
                 
 
-                   <%= label :password , "Password " , :class => "form-label"   %>
-                  <%= password_field :password , :class => "form-control form-control-lg" %>
+                   <%= f.label :password , "Password " , :class => "form-label"   %>
+                  <%= f.password_field :password , :class => "form-control form-control-lg" %>
             
                 </div>
 
-                <div class="form-outline mb-4">
-                   <%= label :passowrd_confirmation , "Re-type Password " , :class => "form-label"   %>
-                  <%= password_field :passowrd_confirmation  , :class => "form-control form-control-lg" %>
+              <div class="form-outline mb-4">
+                   <%= f.label :password_confirmation , "Re-type Password " , :class => "form-label"   %>
+                  <%= f.password_field :password_confirmation  , :class => "form-control form-control-lg " %>
+                  </div>
             
-                </div>
+                
 
                 <div class="d-flex justify-content-center">
                 
