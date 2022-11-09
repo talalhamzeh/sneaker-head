@@ -1,24 +1,30 @@
-# README
+# Sneakhead 
+https://sneakerheadwebapp.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- An app for sneakerheads to keep track of the shoes in their collection, as well as their current market value
+- Ability to view other users' collections
+- 
 
-Things you may want to cover:
+# App Features
+- Sort sneakers based on price and date when sneaker was added
+- Filter sneakers based on brands and release year
+- Dynamic price fetching from 3 different sources - StockX, GOAT and Ebay
+- collection list , ability to favorite the sneaker you have in one list 
+- subtotal values for collection, amount invested so far, current value of collection, etc
 
-* Ruby version
 
-* System dependencies
+# Further Development
+- User-to-user chat/message function
+- add Size options 
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# skills used 
+- Ruby
+- Javascript
+- HTML
+- CSS
+- Rails Framework
+- Postgres Database
+- Sass & Bootstrap
+- Heroku
+- Price-fetching API
