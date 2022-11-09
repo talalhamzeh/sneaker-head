@@ -1,4 +1,4 @@
-# Sneakhead 
+# Sneakerhead 
 https://sneakerheadwebapp.herokuapp.com/
 
 - An app for sneakerheads to keep track of the shoes in their collection, as well as their current market value
